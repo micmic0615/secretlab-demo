@@ -4,6 +4,6 @@ The advantage of this approach is easier data-tracking because there is pretty m
 
 Image switching is done by assigning a randomly generated ID to every image.  The id of the currently displayed image/annotation set is then just saved as SAVE_FILE.mainId and renderSaveFile just digs up the matching id from the array of images.
 
-
-Note:
 As instructed, no libraries were used.  However, I wrote my code in es6 because I find it easier.  I just ran the code through an online es6 -> es5 transpiler for better browser compatibility.  The es6 source code is script.js.  
+
+A limitation that I encountered is the fileSize/character limit of localStorage which varies from browser to browser.  The webpage pretty much crashes when that limit is reached.
