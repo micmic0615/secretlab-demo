@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: calc(100% - 70px);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content:center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    flex-flow: wrap
+}
+
+.spacer {
+    width: 100%;
+    height: 15px;
+}
+
+.canvas-wrapper {
+    position: relative;
+}
+
+canvas {
+    max-width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#canvas-img {
+    position: relative;
+    background-color: #ccc;
+}
+
+#annotation-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    pointer-events: none;
+}
+
+#input-annotation {
+    display: none;
+    position: absolute;
+    height: 20px;
+    font-size: 14px;
+    color: #f00;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+
+#btn-container {
+    height: 70px;
+    flex-flow: nowrap;    
+    position: fixed;
+    bottom: 0px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0px;
+    background-color: #fff;
+}
+
+
+.annotation-box {
+    position: absolute;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.annotation-box-comment {
+    font-size: 12px;
+    color: #000;
+    margin: 2px 4px;
+    padding: 0px 2px;
+    position: relative;
+}
+
+.annotation-box .annotation-box-inner {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.annotation-box:hover .annotation-box-inner {
+    opacity: 0.5;
+}
+
+.annotation-box-delete {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    display: none;
+}
+
+.annotation-box:hover .annotation-box-delete {
+    display: block;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin: 0px 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.custom-file-upload.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.gallery-img {
+    width: 90px;
+    height: 90px;
+    background-color: #ccc;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 4px;
+    
+    cursor: pointer;
+    border: 3px solid #ccc;
+}
+
+.gallery-img:hover {
+    border: 3px solid #ff0;
+}
+
+.gallery-img.active {
+    border: 3px solid #f00;
+}
+
+

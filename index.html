@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="initializePage()">
+    <div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas-img"></canvas>
+                    <canvas id="canvas-annotation"></canvas>
+                    <div id="annotation-list"></div>
+
+                    <textarea id="input-annotation"></textarea>
+                </div>
+            </div>
+            
+            <div class="spacer"></div>
+        
+            <div class="container" id="gallery-container"></div>
+    
+            <div class="container" style="height: 70px; opacity: 0;"></div>
+        </div>
+       
+    
+        <div class="container" id="btn-container">
+            <div class="custom-file-upload" onclick="(()=>{document.querySelector('#input-file').click()})()">
+                Upload Image
+            </div>
+
+            <div class="custom-file-upload" onclick="deleteImage()">
+                Delete Image
+            </div>
+
+            <div id="btn-prev" class="custom-file-upload" onclick="switchImage(-1)">
+                Previous
+            </div>
+
+            <div id="btn-next" class="custom-file-upload" onclick="switchImage(1)">
+                Next
+            </div>
+        </div>
+    </div>
+    
+ 
+    <form id="input-form">
+        <input id="input-file" type="file" onchange="uploadFile()" />
+    </form>
+
+    <!-- <script src="./script.js"></script> -->
+    <script src="./transpiled-min.js"></script>
+</body>
+
+
+</html>
